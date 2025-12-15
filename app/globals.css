@@ -9,7 +9,11 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-host-grotesk);
+  --font-poppins: var(--font-poppins);
+  --font-cinzel: var(--font-cinzel);
+  --font-calson: var(--font-calson);
+  --font-inter: var(--font-inter);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +26,530 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-family: var(--font-poppins);
+}
+.borders {
+  border-top: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Hero {
+  position: relative;
+  font-weight: 800;
+}
+.Hero::before {
+  content: "";
+  position: absolute;
+  background-image: url("/about.jpg");
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: -1111;
+  opacity: 0.5;
+  filter: saturate(0.1);
+  filter: brightness(0.3);
+}
+.about-bg {
+  background-image: url("/aboutpage.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.button-cutout {
+  position: relative;
+  filter: drop-shadow(0 1px 0 #000) drop-shadow(-1px 0 0 #000)
+    drop-shadow(1px 0 0 #000) drop-shadow(0 -1px 0 #000)
+    drop-shadow(8px 8px 0 #000);
+
+  &:hover {
+    filter: drop-shadow(0 1px 0 #000) drop-shadow(-1px 0 0 #000)
+      drop-shadow(1px 0 0 #000) drop-shadow(0 -1px 0 #000)
+      drop-shadow(2px 2px 0 #000);
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: calc(100% - 1px);
+    content: "";
+    background: inherit;
+    width: 1rem;
+    height: 100%;
+    clip-path: polygon(
+      23% 19%,
+      0 0,
+      100% 0,
+      100% 100%,
+      0 100%,
+      29% 79%,
+      9% 80%,
+      0 33%
+    );
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: calc(100% - 1px);
+    content: "";
+    background: inherit;
+    width: 1rem;
+    height: 100%;
+    clip-path: polygon(
+      100% 0,
+      74% 28%,
+      100% 29%,
+      100% 70%,
+      84% 78%,
+      100% 100%,
+      0 100%,
+      0 0
+    );
+  }
+}
+li {
+  transition: 0.5s ease-in-out;
+}
+li:hover {
+  background-color: #fffdfd;
+  color: #000;
+}
+.toggle {
+  display: grid;
+  justify-self: end;
+  align-self: center;
+  grid-template-columns: 1fr 1fr;
+  height: 24px;
+}
+.toggle1,
+.toggle3,
+.toggle4 {
+  border: 1px solid white;
+  width: 12px;
+  height: 12px;
+  border-radius: 20%;
+  margin: 1px;
+}
+.toggle2 {
+  border: 1px solid white;
+  border-radius: 30%;
+  height: 12px;
+  width: 12px;
+  rotate: calc(20deg);
+  animation: bounce 1s ease-in-out 0.5s infinite normal;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.text {
+  font-weight: 800;
+  background-image: url(/audiowave.png);
+  color: transparent;
+  background-position: center;
+  background-clip: text;
+  background-size: 200% auto;
+  animation: moveLeft 7s linear infinite;
+}
+
+@keyframes moveLeft {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: -100% center;
+  }
+}
+
+/* From Uiverse.io by Adrwaan */
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 190px;
+  height: 254px;
+  background: #434343;
+  border-radius: 10px;
+  transition: 1s ease-in-out;
+}
+
+.card:hover {
+  background-image: url("/Album_104310.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 190px;
+  height: 254px;
+  background-color: tomato;
+  border-radius: 10px;
+  z-index: -1;
+  transition: all 0.4s;
+  animation: animate 5s linear infinite;
+}
+/* .card:hover {
+  background-image:;
+} */
+.card:hover::before {
+  width: 197px;
+  height: 259px;
+}
+
+.card:hover .paperplane {
+  transform: scale(1.07) translateY(-10%) rotate(18deg);
+}
+
+.play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 190px;
+  height: 254px;
+  background: #434343;
+  border-radius: 10px;
+  transition: 1s ease-in-out;
+}
+
+.play:hover {
+  background-image: url("/chatam.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.play::before {
+  content: "";
+  position: absolute;
+  width: 190px;
+  height: 254px;
+  background-color: tomato;
+  border-radius: 10px;
+  z-index: -1;
+  transition: all 0.4s;
+  animation: animate 5s linear infinite;
+}
+/* .play:hover {
+  background-image:;
+} */
+.play:hover::before {
+  width: 197px;
+  height: 259px;
+}
+
+.play:hover .paperplane {
+  transform: scale(1.07) translateY(-10%) rotate(18deg);
+}
+
+.paperplane {
+  width: 70px;
+  transition: 0.4s all;
+}
+
+@keyframes animate {
+  50% {
+    filter: hue-rotate(350deg);
+  }
+}
+
+.take {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 190px;
+  height: 254px;
+  background: #434343;
+  border-radius: 10px;
+  transition: 1s ease-in-out;
+}
+
+.take:hover {
+  background-image: url("/Ngozi.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.take::before {
+  content: "";
+  position: absolute;
+  width: 190px;
+  height: 254px;
+  background-color: tomato;
+  border-radius: 10px;
+  z-index: -1;
+  transition: all 0.4s;
+  animation: animate 5s linear infinite;
+}
+/* .take:hover {
+  background-image:;
+} */
+.take:hover::before {
+  width: 197px;
+  height: 259px;
+}
+
+.take:hover .paperplane {
+  transform: scale(1.07) translateY(-10%) rotate(18deg);
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 190px;
+  height: 254px;
+  background: #434343;
+  border-radius: 10px;
+  transition: 1s ease-in-out;
+}
+
+.game:hover {
+  background-image: url("/album4.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.game::before {
+  content: "";
+  position: absolute;
+  width: 190px;
+  height: 254px;
+  background-color: tomato;
+  border-radius: 10px;
+  z-index: -1;
+  transition: all 0.4s;
+  animation: animate 5s linear infinite;
+}
+
+.game:hover::before {
+  width: 197px;
+  height: 259px;
+}
+
+.game:hover .paperplane {
+  transform: scale(1.07) translateY(-10%) rotate(18deg);
+}
+/* media query for cards */
+@media (max-width: 991.98px) {
+  .card {
+    background-image: url("/Album_104310.png");
+    background-position: center;
+    background-size: cover;
+  }
+  .game {
+    background-image: url("/album4.png");
+    background-position: center;
+    background-size: cover;
+  }
+  .take {
+    background-image: url("/Ngozi.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  .play {
+    background-image: url("/chatam.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+label {
+  font-size: 11px;
+}
+.service {
+  font-weight: 800;
+}
+.stack-layout {
+  display: grid;
+  grid-template-areas: "stack";
+  place-items: center;
+}
+
+.stack-layout > * {
+  grid-area: stack;
+}
+.servicelabel {
+  font-weight: 800;
+}
+.values {
+  font-weight: 800;
+}
+
+.valueTags {
+  font-weight: 800;
+}
+
+/* From Uiverse.io by gharsh11032000 */
+.animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 0 0 2px white;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: white;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #212121;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px white;
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+/* From Uiverse.io by satyamchaudharydev */
+.button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: rgb(226, 37, 24);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.button:hover .icon {
+  transform: translate(4px);
+}
+
+.button:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
 }
