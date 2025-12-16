@@ -2,7 +2,7 @@ import { CSSProperties, ElementType, ReactNode } from "react";
 import clsx from "clsx";
 
 type BoundedProps = {
-  as?: ElementType;
+  as?: "h1" | "section";
   className?: string;
   style?: CSSProperties;
   children: ReactNode;

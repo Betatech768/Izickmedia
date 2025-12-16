@@ -5,7 +5,6 @@ import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 // components imports
 import { Bounded } from "@/app/components/Bounded";
 import { Header } from "@/app/components/Heading";
-import { ButtonLink } from "@/app/components/ButtonLink";
 
 /**
  * Props for `Hero`.
