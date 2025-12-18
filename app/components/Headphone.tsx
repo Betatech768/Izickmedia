@@ -69,7 +69,7 @@ export function Headphone(props: HeadphoneProps) {
               <group
                 name="Skullcandy_Crusher"
                 rotation={[-Math.PI / 2, 0, 0]}
-                scale={0.4}
+                scale={0.3}
               >
                 <mesh
                   name="Skullcandy_Crusher_M_Skullcandy_Crusher_0"

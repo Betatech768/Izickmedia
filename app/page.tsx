@@ -9,12 +9,12 @@ export default function Home() {
     <section>
       <section className="Hero group h-screen flex flex-col justify-center items-center">
         <InteractiveHeadphones />
-        <div className="flex gap-2 text-5xl md:text-7xl">
+        <div className="flex gap-2 text-4xl md:text-7xl">
           <span className="text-shadow-lg text-shadow-cyan-100">TOUCHING</span>
           <span className="text-red-500 font-cinzel">LIVES</span>
         </div>
         <div className="flex flex-col items-center">
-          <span className="text-3xl italic font-calson">through</span>
+          <span className="text-2xl italic font-calson">through</span>
           <span className="place-self-end text-red-500">....godly sounds</span>
           <a href="mailto:info@izickmedia.com?subject=Inquiry" className="py-8">
             <button className="button px-8">
@@ -35,7 +35,7 @@ export default function Home() {
         <div>
           <div className="backgroundImage my-auto">
             <div className="text flex justify-center text-5xl">Our Goal</div>
-            <div className="text text-5xl">50 Million Souls</div>
+            <div className="text text-4xl">50 Million Souls</div>
             <Link href={"/about"}>
               <button className="animated-button my-20 mx-auto">
                 <svg
@@ -60,7 +60,7 @@ export default function Home() {
         </div>
         <div className="border-l px-6">
           <div className="flex justify-center py-8 text-5xl">Our Vision</div>
-          <p className="font-sans text-center md:text-left pb-6">
+          <p className="font-sans text-sm md:text-lg text-center md:text-left pb-6">
             IzickMedia exists to raise a generation of sound that transforms
             lives, culture, and faith. Our vision is to become a leading gospel
             media and music powerhouse that touches the soul of men through
@@ -142,7 +142,7 @@ export default function Home() {
         <div className="pt-8 text-3xl mt-8">Register for Newsletter</div>
         <Form className="flex flex-col py-8 relative" action="/about">
           <input
-            className="border h-10 w-xl text-center peer my-2"
+            className="border h-10 w-xs md:w-xl text-center peer my-2"
             type="email"
             name="email"
             id="email"

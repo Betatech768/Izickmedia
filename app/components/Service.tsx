@@ -9,7 +9,7 @@ type Props = {
 function ServiceProvided({ service, index }: Props) {
   return (
     <div className="group relative overflow-hidden h-72 flex flex-col items-center gap-4 m-4 rounded-2xl">
-      <div className="stack-layout ">
+      <div className="stack-layout overflow-hidden relative">
         <PrismicNextImage
           field={service.data.background}
           width={500}
@@ -21,7 +21,7 @@ function ServiceProvided({ service, index }: Props) {
           field={service.data.foreground}
           width={500}
           alt=""
-          className="transform transition-transform duration-1000 ease-in-out 
+          className="absolute top-7 transform transition-transform duration-1000 ease-in-out 
           group-hover:scale-110 z-10 brightness-95 md:group-hover:brightness-100"
         />
         <h3
