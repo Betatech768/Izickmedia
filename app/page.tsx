@@ -31,7 +31,7 @@ export default function Home() {
         </div>
       </section>
       {/* our vision */}
-      <section className="vision md:grid grid-cols-2 border-r border-b place-items-center h-[80dvh] flex flex-col px-10 justify-center">
+      <section className="vision md:grid grid-cols-2 border-r place-items-center h-[80dvh] flex flex-col px-10 justify-center">
         <div>
           <div className="backgroundImage my-auto">
             <div className="text flex justify-center text-5xl">Our Goal</div>

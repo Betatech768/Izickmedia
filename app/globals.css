@@ -180,7 +180,9 @@ li:hover {
   position: relative;
   width: 190px;
   height: 254px;
-  background: #434343;
+  background-image: url("/Album_104310.png");
+  background-position: center;
+  background-size: cover;
   border-radius: 10px;
   transition: 1s ease-in-out;
 }
@@ -221,7 +223,9 @@ li:hover {
   position: relative;
   width: 190px;
   height: 254px;
-  background: #434343;
+  background-image: url("/chatam.jpg");
+  background-position: center;
+  background-size: cover;
   border-radius: 10px;
   transition: 1s ease-in-out;
 }
@@ -273,7 +277,9 @@ li:hover {
   position: relative;
   width: 190px;
   height: 254px;
-  background: #434343;
+  background-image: url("/Ngozi.jpg");
+  background-position: center;
+  background-size: cover;
   border-radius: 10px;
   transition: 1s ease-in-out;
 }
@@ -314,7 +320,9 @@ li:hover {
   position: relative;
   width: 190px;
   height: 254px;
-  background: #434343;
+  background-image: url("/album4.png");
+  background-position: center;
+  background-size: cover;
   border-radius: 10px;
   transition: 1s ease-in-out;
 }
