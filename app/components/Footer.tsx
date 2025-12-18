@@ -38,7 +38,7 @@ export default function Footer() {
       </div>
       <div className="borders py-4"></div>
       <div className="flex justify-between">
-        <p className="text-gray-500">
+        <p className="text-gray-500 text-sm">
           ©{new Date().getFullYear()} copyright of Izickmedia
         </p>
         <div>
